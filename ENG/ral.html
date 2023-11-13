@@ -2,44 +2,99 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel=stylesheet href="css/style.css">
-    
-        <link rel="alternate" href="https://colormash.ru/ral"
-        hreflang="ru"/>
-        <link rel="alternate" href="https://en.colormash.ru/ral"
-        hreflang="x-default"/>
+        <!--https://colormash.ru/css/style.css-->
+        <link rel=stylesheet href="../css/style.css">
+        <link rel=stylesheet href="../css/mRal.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         
-        <link rel="icon" type="image/svg+xml" href="https://en.colormash.ru/favicon.svg">
+        <link rel="icon" type="image/svg+xml" href="https://colormash.ru/favicon.svg">
         
-        <title>Colormash.ru | RAL Classic</title>
+        <title>Colormash.ru | RAL Classic Table</title>
+        <meta name="Keywords" content="ral classic, ral, ral table, hues, shades, color table, rgb, hex, cmyk, color information">
+        <meta name="description" content="The RAL Classic color table presents a widely used color matching system that is in use in almost all industries nowadays."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
     
     <body>
         <div class="cookieWindow">
-            <span>Colormash uses cookies to make your experience of the site as pleasant as possible. By continuing to use the site, you are giving your agreement to our website's cookie use.</span>
+        <svg class="cookieSvg"> 
+            <use href="svg/imgs.svg#cookie"></use>
+        </svg>
+        <div class="cookieContent">
+            <div class="cookieTextContainer">
+                <span class="cookieNotification">Cookie Notification</span>
+                <span class="cookieSpan">Colormash uses cookies to make your experience of the site as pleasant as possible.By continuing to use the site, you are giving your agreement to our website's cookie use.</span>
+            </div>
 
-            <btn class="cookieBtnNO">Decline</btn>
-            <btn class="cookieBtnYES">OK</btn>
+            <div class="cookieBtns">
+                <btn class="cookieBtnYES">OK</btn>
+                <btn class="cookieBtnNO">Decline</btn>
+            </div>
         </div>
+        
+    </div>
         
         <header class="header">
             <div class="header_container">
+                <a href="index.html">
+                    <svg class="logo"> 
+                        <use href="svg/imgs.svg#logo1"></use>
+                    </svg>
+                    <svg class="logo"> 
+                        <use href="svg/imgs.svg#logo2"></use>
+                    </svg>
+                </a>
+                
+                <div class="header_menu_mobile">
+                    <svg class='mobileMenuSvg'>
+                    <use href="svg/imgs.svg#mobileMenu"></use>
+                    </svg>
+
+                    <div class="header_menu_mobile_content" style='left: -15em;'>
+                        <a class="header_menu_mobile_item ralMobile" href="ral.html">
+                            <span>RAL Classic</span>
+                        </a>
+                        <div class='header_menu_mobile_options'>
+
+                            <div id="themeSwitcher_mobile" class="themeSwitcher">
+
+                                <svg class="themeSwitcherSun" > 
+                                    <use href="svg/imgs.svg#themeSwitcher_sun"></use>
+                                </svg>
+
+                                <svg class="themeSwitcherMoon"> 
+                                    <use href="svg/imgs.svg#themeSwitcher_moon"></use>
+                                </svg>
+
+                            </div>
+
+                            <div id='header_language_mobile' class="header_language">
+
+
+                                <svg class="language_current" > 
+                                    <use class="language_current_globe" href="svg/imgs.svg#globe"></use>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div id ='language_choose_container_mobile' class="language_choose_container">
+                            <div class="language_choose">
+                                <a class="language" href="ral.html">ENG</a>
+                                <a class="language" href="https://colormash.ru/ral.html">RUS</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
                 <div class="header_menu">
-            
-                    <a href="index.html">
-                        <svg class="logo"> 
-                            <use href="svg/imgs.svg#logo1"></use>
-                        </svg>
-                        <svg class="logo"> 
-                            <use href="svg/imgs.svg#logo2"></use>
-                        </svg>
-                    </a>
 
                     <a class="header_menu_element_first" href="ral.html">
                         <span>RAL Classic</span>
@@ -59,22 +114,22 @@
                         </svg>
 
                     </div>
+                </div>
+                
+                <div class="themeSwitcher">
 
-                    <div class="themeSwitcher">
+                    <svg class="themeSwitcherSun" > 
+                        <use href="svg/imgs.svg#themeSwitcher_sun"></use>
+                    </svg>
 
-                        <svg class="themeSwitcherSun" > 
-                            <use href="svg/imgs.svg#themeSwitcher_sun"></use>
-                        </svg>
+                    <svg class="themeSwitcherMoon"> 
+                        <use href="svg/imgs.svg#themeSwitcher_moon"></use>
+                    </svg>
 
-                        <svg class="themeSwitcherMoon"> 
-                            <use href="svg/imgs.svg#themeSwitcher_moon"></use>
-                        </svg>
-
-                        <span class="themeSwitcher_text_en">Site theme</span>
-
-                    </div>
+                    <span class="themeSwitcher_text_en">Site theme</span>
 
                 </div>
+                
             </div>
 
         </header>
@@ -88,7 +143,6 @@
                                 <use href="svg/imgs.svg#ralClassic"></use>
                             </svg>
                         </btn>
-                        <!--<btn class="pantoneBtn" href=""></btn>-->
                     </div>
                     
                     <div class="ralInfoText_1_en">
@@ -2012,7 +2066,6 @@
   type="module"
   src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs"></script>
     
-    <script src="js/index.js"></script>
-    <script src="js/ral.js"></script>
+    <script src="../RUS/js/index.js"></script>
     
 </html>
