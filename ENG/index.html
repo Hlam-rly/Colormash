@@ -3,43 +3,29 @@
     
 <head>
     <meta charset="utf-8">
-    <!--https://colormash.ru/css/style.css-->
-    <link rel=stylesheet href="./css/style.css">
+    <link rel=stylesheet href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     
-    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />-->
+    <meta http-equiv="Expires" content="0" />
     
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="https://en.colormash.ru/favicon.svg">
     
     <title>Colormash.ru | Color palette generator</title>
-    <meta name="Keywords" content="color, coloristics, color palette, palette generator, color scheme, hues, shades, color mixes, color combinations, mix a color">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Colormash will help you choose a color palette for your site or product. Explore new colors online with our blending system." />
 </head>
     
+    
 <body>
-
     <div class="cookieWindow">
-        <svg class="cookieSvg"> 
-            <use href="svg/imgs.svg#cookie"></use>
-        </svg>
-        <div class="cookieContent">
-            <div class="cookieTextContainer">
-                <span class="cookieNotification">Cookie Notification</span>
-                <span class="cookieSpan">Colormash uses cookies to make your experience of the site as pleasant as possible.By continuing to use the site, you are giving your agreement to our website's cookie use.</span>
-            </div>
-
-            <div class="cookieBtns">
-                <btn class="cookieBtnYES">OK</btn>
-                <btn class="cookieBtnNO">Decline</btn>
-            </div>
-        </div>
+        <span>Colormash uses cookies to make your experience of the site as pleasant as possible. By continuing to use the site, you are giving your agreement to our website's cookie use.</span>
         
+        <btn class="cookieBtnNO">Decline</btn>
+        <btn class="cookieBtnYES">OK</btn>
     </div>
     
     <header class="header">
@@ -54,50 +40,6 @@
                 </svg>
             </a>
 
-           <div class="header_menu_mobile">
-                <svg class='mobileMenuSvg'>
-                <use href="svg/imgs.svg#mobileMenu"></use>
-                </svg>
-
-                <div class="header_menu_mobile_content" style='left: -15em;'>
-                    <a class="header_menu_mobile_item ralMobile" href="ral.html">
-                        <span>RAL Classic</span>
-                    </a>
-                    <div class='header_menu_mobile_options'>
-                        
-                        <div id="themeSwitcher_mobile" class="themeSwitcher">
-
-                            <svg class="themeSwitcherSun" > 
-                                <use href="svg/imgs.svg#themeSwitcher_sun"></use>
-                            </svg>
-
-                            <svg class="themeSwitcherMoon"> 
-                                <use href="svg/imgs.svg#themeSwitcher_moon"></use>
-                            </svg>
-
-                        </div>
-                        
-                        <div id='header_language_mobile' class="header_language">
-                           
-
-                            <svg class="language_current" > 
-                                <use class="language_current_globe" href="svg/imgs.svg#globe"></use>
-                            </svg>
-                            
-                        </div>
-                        
-                    </div>
-                    
-                    <div id ='language_choose_container_mobile' class="language_choose_container">
-                        <div class="language_choose">
-                            <a class="language" href="index.html">ENG</a>
-                            <a class="language" href="https://colormash.ru/">RUS</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-           
             <div class="header_menu">
 
                 <a class="header_menu_element_first" href="ral.html">
@@ -110,6 +52,7 @@
 
                 <div class="header_language">
 
+                    <!--<span class="language_current">ENG</span> -->
                     <div class="language_choose_container">
                         <div class="language_choose">
                             <a class="language" href="index.html">ENG</a>
@@ -123,29 +66,27 @@
 
                 </div>
 
+                <div class="themeSwitcher">
+
+                    <svg class="themeSwitcherSun" > 
+                        <use href="svg/imgs.svg#themeSwitcher_sun"></use>
+                    </svg>
+
+                    <svg class="themeSwitcherMoon"> 
+                        <use href="svg/imgs.svg#themeSwitcher_moon"></use>
+                    </svg>
+
+                    <span class="themeSwitcher_text_en">Site theme</span>
+
+                </div>
 
             </div>
-            
-            <div class="themeSwitcher">
-
-                <svg class="themeSwitcherSun" > 
-                    <use href="svg/imgs.svg#themeSwitcher_sun"></use>
-                </svg>
-
-                <svg class="themeSwitcherMoon"> 
-                    <use href="svg/imgs.svg#themeSwitcher_moon"></use>
-                </svg>
-
-                <span class="themeSwitcher_text_en">Site theme</span>
-
-            </div>
-        
         </div>
 
     </header>
     <div class="container">
 
-        <div class="main_container" style='margin-top: 0.6em;'>
+        <div class="main_container">
             <div class="colorResult_container">
                 
                 <div class="colorResult_main">
@@ -156,10 +97,13 @@
                     <div class= "rgbContainer">   
                         <p class="RGB_result_text">RGB: &nbsp;</p>
                             
-                        <div class="RGB_result_flex">
-                            <span class="RGB_result_input RGB_result_input_main"></span> 
+                        <div class= "RGB_result">
+                            <div class="RGB_result_flex">
+                                <input class="RGB_result_input RGB_result_input_main" type="text" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;" readonly>
+                            </div>
+                        </div>
                             
-                            <div class='lock_main-2'>
+                        <div class='lock_main-2'>
                                 <svg class="unlockedSvg">
                                     <use href="svg/imgs.svg#unlocked"></use>
                                 </svg>
@@ -167,8 +111,6 @@
                                     <use href="svg/imgs.svg#locked"></use>
                                 </svg>
                             </div> 
-                        </div> 
-                        
                     </div>
                     
                     <div class="option_HideLeftResult">
@@ -199,20 +141,21 @@
                         
                         <div class= "rgbContainer">
                             
-                            <p class="RGB_result_text">RGB:</p>
+                            <p class="RGB_result_text">RGB: &nbsp;</p>
 
-                            <div class="RGB_result_flex">
-                                <span class="RGB_result_input RGB_result_input_left_up"> </span>
-
-                                <div class='lock_left_up-0'>
-                                    <svg class="unlockedSvg">
-                                        <use href="svg/imgs.svg#unlocked"></use>
-                                    </svg>
-                                    <svg class="lockedSvg">
-                                        <use href="svg/imgs.svg#locked"></use>
-                                    </svg>
+                            <div class= "RGB_result">
+                                <div class="RGB_result_flex">
+                                    <input class="RGB_result_input RGB_result_input_left_up" type="text" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;" readonly>
                                 </div>
-
+                            </div>
+                            
+                            <div class='lock_left_up-0'>
+                                <svg class="unlockedSvg">
+                                    <use href="svg/imgs.svg#unlocked"></use>
+                                </svg>
+                                <svg class="lockedSvg">
+                                    <use href="svg/imgs.svg#locked"></use>
+                                </svg>
                             </div>
                             
                         </div>
@@ -231,22 +174,23 @@
                         
                         <div class= "rgbContainer">
                             
-                            <p class="RGB_result_text">RGB:</p>
+                            <p class="RGB_result_text">RGB: &nbsp;</p>
 
+                            <div class= "RGB_result">
                                 <div class="RGB_result_flex">
-                                    <span class="RGB_result_input RGB_result_input_left_down"></span> 
-                                    
-                                    <div class='lock_left_down-1'>
-                                        <svg class="unlockedSvg">
-                                            <use href="svg/imgs.svg#unlocked"></use>
-                                        </svg>
-                                        <svg class="lockedSvg">
-                                            <use href="svg/imgs.svg#locked"></use>
-                                        </svg>
-                                    </div>   
-                                      
+                                    <input class="RGB_result_input RGB_result_input_left_down" type="text" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;" readonly>
                                 </div>
-                                
+                            </div>
+                            
+                            <div class='lock_left_down-1'>
+                                <svg class="unlockedSvg">
+                                    <use href="svg/imgs.svg#unlocked"></use>
+                                </svg>
+                                <svg class="lockedSvg">
+                                    <use href="svg/imgs.svg#locked"></use>
+                                </svg>
+                            </div>
+                            
                         </div>
                         
                         <div class="copyColor copyColor_left_down">
@@ -264,20 +208,21 @@
                         
                         <div class= "rgbContainer">
                             
-                            <p class="RGB_result_text">RGB:</p>
+                            <p class="RGB_result_text">RGB: &nbsp;</p>
 
-                            <div class="RGB_result_flex">
-                                <span class="RGB_result_input RGB_result_input_right_up"></span> 
-
-                                <div class='lock_right_up-3'>
-                                    <svg class="unlockedSvg">
-                                        <use href="svg/imgs.svg#unlocked"></use>
-                                    </svg>
-                                    <svg class="lockedSvg">
-                                        <use href="svg/imgs.svg#locked"></use>
-                                    </svg>
+                            <div class= "RGB_result">
+                                <div class="RGB_result_flex">
+                                    <input class="RGB_result_input RGB_result_input_right_up" type="text" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;" readonly>
                                 </div>
-
+                            </div>
+                            
+                            <div class='lock_right_up-3'>
+                                <svg class="unlockedSvg">
+                                    <use href="svg/imgs.svg#unlocked"></use>
+                                </svg>
+                                <svg class="lockedSvg">
+                                    <use href="svg/imgs.svg#locked"></use>
+                                </svg>
                             </div>
                             
                         </div>
@@ -296,21 +241,22 @@
                         
                         <div class= "rgbContainer">
                             
-                            <p class="RGB_result_text">RGB:</p>
+                            <p class="RGB_result_text">RGB: &nbsp;</p>
 
-                            <div class="RGB_result_flex">
-                                <span class="RGB_result_input RGB_result_input_right_down"></span> 
-
-                                <div class='lock_right_down-4'>
-                                    <svg class="unlockedSvg">
-                                        <use href="svg/imgs.svg#unlocked"></use>
-                                    </svg>
-                                    <svg class="lockedSvg">
-                                        <use href="svg/imgs.svg#locked"></use>
-                                    </svg>
+                            <div class= "RGB_result">
+                                <div class="RGB_result_flex">
+                                    <input class="RGB_result_input RGB_result_input_right_down" type="text" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;" readonly>
                                 </div>
-
-                            </div>    
+                            </div>
+                            
+                            <div class='lock_right_down-4'>
+                                <svg class="unlockedSvg">
+                                    <use href="svg/imgs.svg#unlocked"></use>
+                                </svg>
+                                <svg class="lockedSvg">
+                                    <use href="svg/imgs.svg#locked"></use>
+                                </svg>
+                            </div>
                             
                         </div>
                         
@@ -358,53 +304,43 @@
             </div>
                 
             <span class="result_text_en">A palette with shades created by mixing colors</span>
-            <div class="option_container">
-               
-               <div class="optionsLeft">
-                    <div class="option_info">
-                        <svg class ="option_info_svg"> 
-                            <use href="svg/imgs.svg#info"></use>
-                        </svg>
-                    </div>   
+            
+            <div class="options">
+            
+                <div class="option_text">
+                    
+                    <svg class ="option_text_svg"> 
+                        <use href="svg/imgs.svg#t"></use>
+                    </svg>
+                
+                    <span class="option_text_text_en">Display sample text on color</span>
+                
                 </div>
-               
-                <div class="options">
+                
+                <a class="option_save" download="myColor.png">
+                    <svg class ="option_download_svg"> 
+                        <use href="svg/imgs.svg#downloadSvg"></use>
+                    </svg>
 
-                    <div class="option_text">
+                    <span class="option_save_text_en">Save palette</span>
+                
+                </a>
 
-                        <svg class ="option_text_svg"> 
-                            <use href="svg/imgs.svg#t"></use>
-                        </svg>
+                  <!--<a target="_blank" class="option_Pinterest" data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-tall="true" data-pin-round="true" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest">
+                    <svg class ="option_Pinterest_svg"> 
+                        <use href="svg/imgs.svg#pinterestSvg"></use>
+                    </svg>
+                </a>-->
+                
+                <a class="option_behance" target="_blank">
+                    
+                    <svg class ="option_behance_svg"> 
+                        <use href="svg/imgs.svg#behanceSvg"></use>
+                    </svg>
 
-                        <span class="option_text_text_ru">Отобразить пример текста на цвете</span>
-
-                    </div>
-
-                    <a class="option_save" download="myPalette.png">
-                        <svg class ="option_download_svg"> 
-                            <use href="svg/imgs.svg#downloadSvg"></use>
-                        </svg>
-
-                        <span class="option_save_text_ru">Сохранить палитру</span>
-                    </a>
-
-                      <!--<a target="_blank" class="option_Pinterest" data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-tall="true" data-pin-round="true" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest">
-                        <svg class ="option_Pinterest_svg"> 
-                            <use href="svg/imgs.svg#pinterestSvg"></use>
-                        </svg>
-                    </a>-->
-
-                    <a class="option_behance" target="_blank">
-
-                        <svg class ="option_behance_svg"> 
-                            <use href="svg/imgs.svg#behanceSvg"></use>
-                        </svg>
-
-                        <span class="option_behance_text_ru">Поиск по цвету в Behance</span>
-
-                    </a>
-
-                </div>
+                    <span class="option_behance_text_en">Search by color in Behance</span>
+                    
+                </a>
                 
             </div>
             
@@ -517,21 +453,21 @@
             <h1 class="aboutSite_h">Colormash.ru provides ways to create color palettes.</h1>
         </div>-->
         
-        <div class="aboutSite" style="margin-top: 3.5em;">
+        <div class="aboutSite">
             <div class="aboutSite_en">
                 <h1 class="aboutSite_h">Colormash.ru provides ways to create color palettes.</h1>
-                <div class="aboutSite_minimize">
-                    <svg class="aboutSite_minimize1">
-                        <use href="svg/imgs.svg#line"></use>
-                    </svg>
-                    <svg class="aboutSite_minimize2">
-                        <use href="svg/imgs.svg#line"></use>
-                    </svg>
-                </div>
                 <p>The tool will help you choose a color palette for your site or product. A color palette is a scheme of shades to a particular color. All you have to do is mix the colors to get your palette.</p>
                 <p>Start picking up the colors in the bottom area of the tool using the "add color" button and the window with the hue setting. Like the color and/or palette you got and don't want to lose it? Just download it from the right micromenu. In the same menu there is a function to display text in different shades to visualize the beautiful design of your site or article. Nearby you can find a button to search for the selected color on Behance.</p>
                 <p>Explore new colors online with our blending system. Pick up shades or simply type in RGB or HEX code to quickly copy a color you've prepared to create a palette.</p>
                 <p>If you are completely unfamiliar with color and coloristics, you can check the RAL CLASSIC color table on our site and choose your first shade.</p>
+            </div>
+            <div class="aboutSite_minimize">
+                <svg class="aboutSite_minimize1">
+                    <use href="svg/imgs.svg#line"></use>
+                </svg>
+                <svg class="aboutSite_minimize2">
+                    <use href="svg/imgs.svg#line"></use>
+                </svg>
             </div>
         </div>
         
@@ -544,193 +480,190 @@
                 <use href="svg/imgs.svg#btnX"></use>
             </svg>
         </div>
-        <div class="colorChangeMenu_container">
-            <div class="colorBox">
+        
+        <div class="colorBox">
 
-                <div class="picker" ondragstart="return false;" style="left:100%; top: 0%;">
-                    <div class="picker_color"></div>
+            <div class="picker" ondragstart="return false;" style="left:100%; top: 0%;">
+                <div class="picker_color"></div>
 
-                    <div class="picker_2"></div>
-                    <div class="picker_1"></div>
-                </div>
-
-                <div class="colorBox_color" ondragstart="return false;"></div>
-                <div class="whiteGradient" ondragstart="return false;"></div>
-                <div class="darkGradient" ondragstart="return false;"></div>
+                <div class="picker_2"></div>
+                <div class="picker_1"></div>
             </div>
 
-            <div class="colorHue">
-                <div class="huePicker">
-                    <div class="huePicker_color"></div>
+            <div class="colorBox_color" ondragstart="return false;"></div>
+            <div class="whiteGradient" ondragstart="return false;"></div>
+            <div class="darkGradient" ondragstart="return false;"></div>
+        </div>
 
-                    <div class="huePicker_2"></div>
-                    <div class="huePicker_1"></div>
-                </div>
-            </div>
+        <div class="colorHue">
+            <div class="huePicker">
+                <div class="huePicker_color"></div>
 
-            <div class="colorRGB">
-                <span>RGB:</span>
-                <input class="R" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
-                <input class="G" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
-                <input class="B" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
-            </div>
-
-            <div class="colorHEX">
-                <span>HEX:</span>
-                <input class="hex" ondragstart="return false;" ondrop="return false;"pattern="[A-Za-z0-9]" maxlength="7">
-            </div>
-
-            <div class="colors">
-                <span class="newColor_text">new</span>
-                <div class='newColor'></div>
-                <span class="oldColor_text">current</span>
-                <div class='oldColor'>
-                    <svg class='oldColorSvg'>
-                        <use href="svg/imgs.svg#revert"></use>
-                    </svg>
-                </div>
-
-            </div>
-
-            <div class="saveColorBtn">
-                <span>Save</span>
-            </div>
-
-            <div class="savedColorsText">
-                <span id='savedColorsText_text_en' class="savedColorsText_text">
-                Saved colors</span>
-            </div>
-
-            <div class="savedColors">
-                <div class="sC sC_0">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_1">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_2">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_3">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_4">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_5">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_6">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_7">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_8">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sC sC_9">
-                    <div class="scCopy">
-                        <svg class="scCopySvg">
-                            <use href="svg/imgs.svg#dropper"></use>
-                        </svg>
-                    </div>
-                    <div class="scClose">
-                        <svg class="scCloseSvg">
-                            <use href="svg/imgs.svg#btnX"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="moreSavedColors">
-                <span class="more">more</span>
-                <svg class="svgMoreArrowDown"> 
-                    <use href="svg/imgs.svg#arrow"></use>
-                </svg>
+                <div class="huePicker_2"></div>
+                <div class="huePicker_1"></div>
             </div>
         </div>
+
+        <div class="colorRGB">
+            <span>RGB:</span>
+            <input class="R" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
+            <input class="G" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
+            <input class="B" maxlength="3" size="3" ondragstart="return false;" ondrop="return false;">
+        </div>
+
+        <div class="colorHEX">
+            <span>HEX:</span>
+            <input class="hex" ondragstart="return false;" ondrop="return false;"pattern="[A-Za-z0-9]" maxlength="7">
+        </div>
+
+        <div class="colors">
+            <span class="newColor_text">new</span>
+            <div class='newColor'></div>
+            <span class="oldColor_text">current</span>
+            <div class='oldColor'>
+            </div>
+
+        </div>
+
+        <div class="saveColorBtn">
+            <span>Save</span>
+        </div>
+
+        <div class="savedColorsText">
+            <span class="savedColorsText_text">
+            Saved colors</span>
+        </div>
+
+        <div class="savedColors">
+            <div class="sC sC_0">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_1">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_2">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_3">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_4">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_5">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_6">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_7">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_8">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="sC sC_9">
+                <div class="scCopy">
+                    <svg class="scCopySvg">
+                        <use href="svg/imgs.svg#dropper"></use>
+                    </svg>
+                </div>
+                <div class="scClose">
+                    <svg class="scCloseSvg">
+                        <use href="svg/imgs.svg#btnX"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="moreSavedColors">
+            <span class="more">more</span>
+            <svg class="svgMoreArrowDown"> 
+                <use href="svg/imgs.svg#arrow"></use>
+            </svg>
+        </div>
+
     </div>
     
     <div class='space'></div>
@@ -751,7 +684,7 @@
     <script
   type="module"
   src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs"></script>
-    <!--https://colormash.ru/js/index.js-->
-    <script src="./js/index.js"></script>
+    
+    <script src="js/index.js"></script>
     
 </html>
