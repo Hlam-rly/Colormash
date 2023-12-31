@@ -1,0 +1,1 @@
+Project for designers, you can click this [link](colormash.vercel.app) to see the site. (Project can have bugs)
